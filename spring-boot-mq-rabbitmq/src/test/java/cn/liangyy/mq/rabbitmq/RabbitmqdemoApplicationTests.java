@@ -35,7 +35,7 @@ public class RabbitmqdemoApplicationTests {
     /**
      * 测试分列模式发送
      */
-    @org.junit.Test
+    @Test
     public void sendFanout() {
         rabbitTemplate.convertAndSend(RabbitConsts.FANOUT_MODE_QUEUE, "", new MessageStruct("fanout message..."));
     }
@@ -43,7 +43,7 @@ public class RabbitmqdemoApplicationTests {
     /**
      * 测试主题模式发送1
      */
-    @org.junit.Test
+    @Test
     public void sendTopic1() {
         rabbitTemplate.convertAndSend(RabbitConsts.TOPIC_MODE_QUEUE, "queue.aaa.bbb", new MessageStruct("topic message..."));
     }
@@ -51,7 +51,7 @@ public class RabbitmqdemoApplicationTests {
     /**
      * 测试主题模式发送2
      */
-    @org.junit.Test
+    @Test
     public void sendTopic2() {
         rabbitTemplate.convertAndSend(RabbitConsts.TOPIC_MODE_QUEUE, "ccc.queue", new MessageStruct("topic message..."));
     }
@@ -59,7 +59,7 @@ public class RabbitmqdemoApplicationTests {
     /**
      * 测试主题模式发送3
      */
-    @org.junit.Test
+    @Test
     public void sendTopic3() {
         rabbitTemplate.convertAndSend(RabbitConsts.TOPIC_MODE_QUEUE, "3.queue", new MessageStruct("topic message..."));
     }
